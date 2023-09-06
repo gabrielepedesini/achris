@@ -1,0 +1,180 @@
+/* Container Styles */
+.zoomist-container {
+    position: relative;
+    touch-action: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Image, Slider, and Wrapper Styles */
+  .zoomist-image,
+  .zoomist-slider,
+  .zoomist-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .zoomist-wrapper {
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  /* Image Styles */
+  .zoomist-image {
+    max-width: none!important;
+    max-height: none!important;
+    pointer-events: none;
+  }
+  
+  /* Slider Styles */
+  .zoomist-slider {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 5px;
+  }
+  
+  .zoomist-slider-main {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Slider Hover Effects */
+  .zoomist-slider-main:hover .zoomist-slider-bar {
+    background-color: #aaa;
+  }
+  
+  .zoomist-slider-main:hover .zoomist-slider-button::before {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Horizontal Slider Styles */
+  .zoomist-slider-main.zoomist-slider-horizontal {
+    align-items: flex-start;
+    width: 150px;
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+  
+  .zoomist-slider-main.zoomist-slider-horizontal .zoomist-slider-bar {
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+  
+  /* Vertical Slider Styles */
+  .zoomist-slider-main.zoomist-slider-vertical {
+    align-items: flex-end;
+    height: 150px;
+    padding: 0 20px;
+    margin: 20px 0;
+  }
+  
+  .zoomist-slider-main.zoomist-slider-vertical .zoomist-slider-bar {
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100%;
+  }
+  
+  /* Slider Bar Styles */
+  .zoomist-slider-bar {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    border-radius: 1px;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+  }
+  
+  /* Slider Button Styles */
+  .zoomist-slider-button {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 0!important;
+    height: 0!important;
+  }
+  
+  .zoomist-slider-button::before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: -5px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s;
+  }
+  
+  /* Zoomer Styles */
+  .zoomist-zoomer {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    width: 26px;
+    height: 53px;
+    overflow: hidden;
+    background-color: #d8d8d8;
+    border: 1px solid #b4b4b4;
+  }
+  
+  /* Zoomer Controls Styles */
+  .zoomist-in-zoomer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 26px;
+    cursor: pointer;
+    background-image: url("images/sprites2.svg");
+    z-index: 4000;
+    border-bottom: 1px solid #b4b4b4;
+  }
+  
+  .zoomist-out-zoomer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+    cursor: pointer;
+    background-image: url("images/sprites2.svg");
+    background-position: 0 -26px;
+    z-index: 5000;
+  }
+  
+  .zoomist-in-zoomer:hover {
+    background-color: rgba(225, 225, 225, 0.9);
+  }
+
+  .zoomist-out-zoomer:hover {
+    background-color: rgba(225, 225, 225, 0.9);
+    border-top: 1px solid #b4b4b4;
+    background-position: 0 -27px;
+  }
+  
+  /* Zoomer Icons Styles */
+
+  .zoomist-in-zoomer svg,
+  .zoomist-out-zoomer svg {
+    display: none;
+  }
+  
+  /* Disabled Zoomer Styles */
+  .zoomist-zoomer-disable {
+    pointer-events: none;
+    opacity: 0.4;
+    background-color: #c4c4c4;
+  }  
