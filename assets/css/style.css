@@ -1653,7 +1653,7 @@ form {
 .input-field:-webkit-autofill:hover,
 .input-field:-webkit-autofill:focus,
 .input-field:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 40px var(--white) inset;
+  -webkit-box-shadow: 0 0 0 50px var(--white) inset;
   -webkit-text-fill-color: var(--dark-gray);
 }
 
@@ -2740,10 +2740,10 @@ footer {
 }
 
 .cosplayer-button {
-  border: 2px solid #ff3b3b;
+  border: 2px solid #8f65bf;
 }
 
 .cosplayer-button:hover {
-  border: 2px solid #ff3b3b;
-  background-color: #ff3b3b;
+  border: 2px solid #8f65bf;
+  background-color: #8f65bf;
 }
