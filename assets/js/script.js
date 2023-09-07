@@ -74,12 +74,62 @@ $(document).ready(function() {
 /* navbar */
 
 function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-  }
+  document.getElementById("myNav").style.width = "100%";
+}
   
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+/* checkbox */
+
+var masterCheckbox = document.querySelector(".download-checkbox");
+var downloadButtons = document.querySelectorAll(".down-button");
+
+// Add event listener to the master checkbox
+masterCheckbox.addEventListener("change", function () {
+  var isChecked = masterCheckbox.checked;
+
+  // Update the download state of all buttons
+  downloadButtons.forEach(function (button) {
+    if (isChecked) {
+      button.classList.remove("disabled");
+    } else {
+      button.classList.add("disabled");
+    }
+  });
+});
+
+// Add event listener to each button to prevent navigation if disabled
+downloadButtons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    if (button.classList.contains("disabled")) {
+      e.preventDefault(); // Prevent navigation if the button is disabled
+    }
+  });
+});
+
+/* download */
+
+var downOpen = document.getElementById('download-open');
+var downClose = document.getElementById('download-close');
+var modal = document.getElementById('modal');
+
+function openModal() {
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+downOpen.addEventListener("click", openModal);
+downClose.addEventListener("click", closeModal);
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+      closeModal();
   }
+});
 
 /* skills */
 
