@@ -139,7 +139,7 @@
     width: 100%;
     height: 26px;
     cursor: pointer;
-    background-image: url("images/sprites2.svg");
+    background-image: url("../images/sprites2.svg");
     z-index: 4000;
     border-bottom: 1px solid #b4b4b4;
   }
@@ -150,7 +150,7 @@
     width: 100%;
     height: 26px;
     cursor: pointer;
-    background-image: url("images/sprites2.svg");
+    background-image: url("../images/sprites2.svg");
     background-position: 0 -26px;
     z-index: 5000;
   }

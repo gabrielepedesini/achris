@@ -531,7 +531,7 @@ a[href^="tel"] {
 @media screen and (max-height: 600px) {
   
   .portfolio-item {
-    height: 60px; /* Altezza aumentata per separare le scritte verticalmente */
+    height: 64px; /* Altezza aumentata per separare le scritte verticalmente */
   }
 
   .portfolio-item p {
@@ -540,8 +540,12 @@ a[href^="tel"] {
 
   .portfolio-title,
   .portfolio-title-alt {
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 46px;
+    font-weight: 500;
+  }
+
+  .portfolio-title {
+    -webkit-text-stroke: .5px var(--white);
   }
 
   .nav-link {
@@ -562,7 +566,7 @@ a[href^="tel"] {
   
   .portfolio-item {
     width: 300px;
-    height: 60px; /* Altezza aumentata per separare le scritte verticalmente */
+    height: 64px; /* Altezza aumentata per separare le scritte verticalmente */
   }
 
   .portfolio-item p {
@@ -571,12 +575,16 @@ a[href^="tel"] {
 
   .portfolio-title,
   .portfolio-title-alt {
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 46px;
+    font-weight: 500;
+  }
+
+  .portfolio-title {
+    -webkit-text-stroke: .5px var(--white);
   }
 
   .nav-link {
-    font-size: 36px;
+    font-size: 42px;
     line-height: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -674,7 +682,7 @@ a[href^="tel"] {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 7vh;
+  bottom: 7%;
   z-index: 1000;
 }
 
@@ -736,7 +744,7 @@ a[href^="tel"] {
   top: 50%;
   transform: translate(0, -50%);
   margin: 0;
-  left: calc(50vw - 28px);
+  left: calc(50vw - 25px);
   color: var(--white);
 }
 
@@ -781,6 +789,7 @@ a[href^="tel"] {
   .carousel-title {
     font-family: 'K2D', sans-serif;
     font-size: 40px;
+    text-align: center;
   }
 
   .underline--magical {
@@ -788,20 +797,75 @@ a[href^="tel"] {
     font-size: 40px;
     color: var(--white);
   }
+
+  .carousel-item {
+    height: 70vh;
+  }
+}
+
+
+@media screen and (max-height: 800px) {
+  .carousel-title {
+    font-family: 'K2D', sans-serif;
+    font-size: 40px;
+  }
+
+  .underline--magical {
+    font-family: 'K2D', sans-serif;
+    font-size: 40px;
+    color: var(--white);
+  }
+
 }
 
 @media screen and (max-width: 520px) {
   .carousel-title {
     font-family: 'K2D', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
+    width: 75vw;
+    text-align: center;
   }
 
   .underline--magical {
     font-family: 'K2D', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     color: var(--white);
   }
+
+  .carousel-control-next {
+    display: none;
+  }
+
+  .carousel-control-prev {
+    display: none;
+  }
 }
+
+@media screen and (max-height: 520px) {
+  .carousel-title {
+    font-family: 'K2D', sans-serif;
+    font-size: 32px;
+    width: 75vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .underline--magical {
+    font-family: 'K2D', sans-serif;
+    font-size: 32px;
+    color: var(--white);
+  }
+
+  .carousel-item {
+    height: 100vh;
+  }
+
+  .down-arrow{
+    display: none;
+  }
+}
+
 
 /* --------------  PORTFOLIO -------------- */
 
@@ -858,9 +922,21 @@ a[href^="tel"] {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .portfolio-column h2 {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .portfolio-column h2 {
-    font-size: 28px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .portfolio-column h2 {
+    font-size: 32px;
   }
 }
 
@@ -1042,9 +1118,23 @@ a[href^="tel"] {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .servizi-box h2 {
+    font-size: 40px;
+  }
+}
+
+
 @media screen and (max-width: 520px) {
   .servizi-box h2 {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .servizi-box h2 {
+    font-size: 32px;
     margin-bottom: 40px;
   }
 }
@@ -1249,9 +1339,22 @@ a[href^="tel"] {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .skills h2 {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .skills h2 {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .skills h2 {
+    font-size: 32px;
     margin-bottom: 40px;
   }
 }
@@ -1532,9 +1635,22 @@ a[href^="tel"] {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .contatti-desc h2 {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .contatti-desc h2 {
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .contatti-desc h2 {
+    font-size: 32px;
     margin-bottom: 40px;
   }
 }
@@ -1690,7 +1806,7 @@ form {
   align-self: left;
   text-decoration: none;
   transition: .3s;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .button-form:hover {
@@ -1699,6 +1815,22 @@ form {
   background-color: var(--pink);
   border-radius: 5px;
   transition: .3s;
+}
+
+.form-privacy {
+  font-size: 14px;
+  color: var(--dark-gray);
+  margin-bottom: 0;
+}
+
+.form-privacy-doc {
+  color: var(--light-gray);
+}
+
+@media screen and (max-width: 450px) {
+  .form-privacy {
+    font-size: 12px;
+  }
 }
 
 /* ----------------- SOCIAL ------------------ */
@@ -1734,9 +1866,30 @@ form {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .container-social h2 {
+    font-size: 40px;
+  }
+
+  .container-social {
+    height: 400px;
+  }
+}
+
+
 @media screen and (max-width: 520px) {
   .container-social h2 {
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+  .container-social {
+    height: 350px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .container-social h2 {
+    font-size: 32px;
   }
 
   .container-social {
@@ -2014,12 +2167,39 @@ footer {
   .container-hero h1 {
     font-size: 40px;
   }
+
+  .hero-progetti {
+    height: 70vh;
+  }
+
+  .gap {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .container-hero h1 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 520px) {
   .container-hero h1 {
     font-size: 28px;
-    margin-bottom: 18vh;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .container-hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-progetti {
+    height: 100vh;
+  }
+
+  .gap {
+    height: 100vh;
   }
 }
 
@@ -2223,7 +2403,8 @@ footer {
   column-count: 4;
   --webkit-column-count: 4;
   --moz-column-count: 4;
-  gap: 30px;
+  column-gap: 30px;
+  grid-column-gap: 30px;
 }
 
 .info-container div {
@@ -2704,6 +2885,12 @@ footer {
   text-align: center;
   transition: .3s;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .container-social .contatti-progetto {
+    margin-bottom: 30px;
+  }
 }
 
 .button-contatti:hover {
