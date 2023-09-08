@@ -81,6 +81,29 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
 
+
+/* download */
+
+var downOpen = document.getElementById('download-open');
+var downClose = document.getElementById('download-close');
+var modal = document.getElementById('modal');
+
+function openModal() {
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+downOpen.addEventListener("click", openModal);
+downClose.addEventListener("click", closeModal);
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
 /* checkbox */
 
 var masterCheckbox = document.querySelector(".download-checkbox");
@@ -109,27 +132,57 @@ downloadButtons.forEach(function (button) {
   });
 });
 
-/* download */
+/* flag cookie */
 
-var downOpen = document.getElementById('download-open');
-var downClose = document.getElementById('download-close');
-var modal = document.getElementById('modal');
-
-function openModal() {
-  modal.style.display = "flex";
-}
-
-function closeModal() {
-  modal.style.display = "none";
-}
-
-downOpen.addEventListener("click", openModal);
-downClose.addEventListener("click", closeModal);
-modal.addEventListener("click", (event) => {
-  if (event.target === modal) {
-      closeModal();
+// Function to check if the "cookie-consent" cookie is set to true
+function hasCookieConsent() {
+  const cookies = document.cookie.split(';');
+  for (const cookie of cookies) {
+    const [name, value] = cookie.trim().split('=');
+    if (name === 'cookie-consent' && value === 'true') {
+      return true;
+    }
   }
-});
+  return false;
+}
+
+// Function to set the "flag-cookie" when the checkbox is flagged
+function setFlagCookie() {
+  const thirtyDaysFromNow = new Date();
+  thirtyDaysFromNow.setDate(thirtyDaysFromNow.getDate() + 30);
+
+  document.cookie = 'flag-cookie=true; expires=' + thirtyDaysFromNow.toUTCString() + '; path=/';
+}
+
+// Function to hide the checkbox container
+function hideCheckboxContainer() {
+  const checkboxContainer = document.getElementById('checkbox-container');
+  if (checkboxContainer) {
+    checkboxContainer.style.display = 'none';
+    downloadButtons.forEach(function (button) {
+      button.classList.remove("disabled");
+    })
+  }
+}
+
+// Check if the user has previously accepted cookies
+if (hasCookieConsent()) {
+  // Hide the checkbox container if "flag-cookie" is true
+  if (document.cookie.includes('flag-cookie=true')) {
+    hideCheckboxContainer();
+  }  
+}
+
+if (masterCheckbox) {
+  masterCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      if (hasCookieConsent()) {
+        setFlagCookie();
+        console.log('Checkbox is checked'); 
+      }
+    }
+  });
+}
 
 /* skills */
 
