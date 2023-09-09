@@ -2650,6 +2650,42 @@ footer {
   }
 }
 
+/* -------------- SCROLL UP --------------- */
+
+.scrollup {
+  position: fixed;
+  right: 3.3%;
+  bottom: -20%;
+  background-color: var(--orange);
+  opacity: .8;
+  padding: 8px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: .3s;
+}
+
+.scrollup:hover {
+  opacity: .6;
+}
+
+.scrollup img {
+  height: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .scrollup {
+    right: 5.3%;
+  }
+}
+
+/* Show scroll */
+
+.show-scroll {
+  bottom: 80px;
+}
+
 /* ----------------- THANKS ---------------- */
 
 .grazie-full {
