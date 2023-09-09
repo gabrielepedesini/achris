@@ -475,6 +475,12 @@ a[href^="tel"] {
 
 .logo-btn {
   height: 35px;
+  transition: .3s;
+}
+
+.logo-btn:hover {
+  opacity: .6;
+  transition: .3s;
 }
 
 .logo-btn img {
@@ -868,7 +874,7 @@ a[href^="tel"] {
   }
 
   .carousel-item {
-    height: 70vh;
+    height: 550px;
   }
 
   .scroll-button {
@@ -1071,7 +1077,7 @@ a[href^="tel"] {
   justify-content: center;
   overflow-x: clip;
   overflow-y: clip;
-  border-radius: 10px;
+  border-radius: 5px;
   aspect-ratio: 1 / 1;
 
   margin-bottom: 25px;
@@ -1079,13 +1085,13 @@ a[href^="tel"] {
 
 .project-img img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 1s;
 }
 
 .project-img img:hover {
   width: 120%;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 1s;
 }
 
@@ -1129,6 +1135,17 @@ a[href^="tel"] {
 
   .project-subtitle {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .project-title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .project-subtitle {
+    font-size: 14px;
   }
 }
 
@@ -1207,6 +1224,17 @@ a[href^="tel"] {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 520px) {
+  .desc-box {
+    width: 100%;
+  }
+
+  .desc-box p {
+    font-size: 16px;
+  }
+}
+
 
 /* --------------- MODAL ----------------- */
 
@@ -1692,7 +1720,7 @@ input[type='checkbox']:checked + label > span:before {
 @media screen and (max-width: 520px) {
   .servizi-desc h3 {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .servizi-desc {
@@ -1700,102 +1728,23 @@ input[type='checkbox']:checked + label > span:before {
   }
 }
 
-.s1:hover {
+@media screen and (max-height: 520px) {
+  .servizi-desc h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .servizi-desc {
+    height: 220px;
+  }
+}
+
+.s:hover {
   padding-left: 15px;
   transition: .3s;
 }
 
-.s1:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s2:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s2:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s3:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s3:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s4:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s4:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s5:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s5:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s6:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s6:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s7:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s7:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s8:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s8:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s9:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s9:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s10:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s10:hover > .vert {
-  transform: rotate(-90deg);
-}
-
-.s11:hover {
-  padding-left: 15px;
-  transition: .3s;
-}
-
-.s11:hover > .vert {
+.s:hover > .vert {
   transform: rotate(-90deg);
 }
 
@@ -1872,6 +1821,17 @@ input[type='checkbox']:checked + label > span:before {
   
   .skill-desc h3 {
     font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  
+  .skill-desc h3 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 3px;
   }
 }
 
@@ -1921,6 +1881,22 @@ input[type='checkbox']:checked + label > span:before {
 	-webkit-border-radius:10px;
 }
 
+@media screen and (max-width: 520px) {
+  
+  .numero {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  
+  .numero {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
 /* -------------- 360 VIEWER -------------- */
 
 #panorama {
@@ -1932,7 +1908,7 @@ input[type='checkbox']:checked + label > span:before {
 .panorama-cover {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-color: #000000b0;
   z-index: 500;
   opacity: 1;
@@ -2105,6 +2081,64 @@ input[type='checkbox']:checked + label > span:before {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .num {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .apice {
+    font-family: 'K2D', sans-serif;
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+  
+    margin-left: 5px;
+  }
+  
+  .apice div {
+    height: 30px;
+    line-height: 15px;
+  }
+
+  .counter-desc {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 15px;
+    color: var(--dark-gray);
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .num {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .apice {
+    font-family: 'K2D', sans-serif;
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    align-items: start;
+  
+    margin-left: 5px;
+  }
+  
+  .apice div {
+    height: 30px;
+    line-height: 15px;
+  }
+
+  .counter-desc {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 15px;
+    color: var(--dark-gray);
+  }
+}
+
 /* ----------------- CONTATTI ------------------ */
 
 .container-contatti {
@@ -2184,15 +2218,31 @@ input[type='checkbox']:checked + label > span:before {
   left: 0; 
 }
 
+@media screen and (max-width: 800px) {
+  .contatto-info {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .contatto-info {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .contatto-info {
-    font-family: 'K2D', sans-serif;
-    font-size: 24px;
-    color: var(--light-gray);
+    font-size: 22px;
     margin-bottom: 30px;
-  
-    display: inline-block;
-    position: relative;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .contatto-info {
+    font-size: 22px;
+    margin-bottom: 30px;
   }
 }
 
@@ -2322,6 +2372,40 @@ form {
   color: var(--light-gray);
 }
 
+@media screen and (max-width: 600px) {
+  .input-field,
+  .input-textarea {
+    font-size: 16px;
+    padding: 24px 20px;
+    margin-bottom: 30px;
+  }
+
+  ::placeholder {
+    color: #9fa7a7;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 1;
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .input-field,
+  .input-textarea {
+    font-size: 16px;
+    padding: 24px 20px;
+    margin-bottom: 30px;
+  }
+
+  ::placeholder {
+    color: #9fa7a7;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 1;
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .form-privacy {
     font-size: 12px;
@@ -2374,7 +2458,8 @@ form {
 
 @media screen and (max-width: 520px) {
   .container-social h2 {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 40px;
   }
 
   .container-social {
@@ -2384,7 +2469,8 @@ form {
 
 @media screen and (max-height: 520px) {
   .container-social h2 {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 40px;
   }
 
   .container-social {
@@ -2474,6 +2560,30 @@ ul li {
   background: #ff911a;
 }
 
+@media screen and (max-width: 520px) {
+  .container-social img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .ul-social li a {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .container-social img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .ul-social li a {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 
 /* ----------------- FOOTER ------------------ */
 
@@ -2508,6 +2618,36 @@ footer {
   font-size: 16px;
   color: #414141;
   text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+  .footer-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .marchetta {
+    font-size: 14px;
+  }
+  
+  .marchetta a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .footer-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .marchetta {
+    font-size: 14px;
+  }
+  
+  .marchetta a {
+    font-size: 14px;
+  }
 }
 
 /* ----------------- THANKS ---------------- */
@@ -2664,11 +2804,11 @@ footer {
   }
 
   .hero-progetti {
-    height: 70vh;
+    height: 550px;
   }
 
   .gap {
-    height: 70vh;
+    height: 550px;
   }
 }
 
@@ -2882,18 +3022,81 @@ footer {
   color: #999999;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 800px) {
   .progetto-desc h2 {
     font-size: 28px;
     font-weight: 400;
     color: var(--white);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   
   .progetto-desc p {
     font-size: 18px;
     font-weight: 400;
     color: #999999;
+  }
+
+  .progetto-desc h3 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .progetto-desc h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  
+  .progetto-desc p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999999;
+  }
+
+  .progetto-desc h3 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .progetto-desc h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 15px;
+  }
+  
+  .progetto-desc p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+  }
+
+  .progetto-desc h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .progetto-desc h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 15px;
+  }
+  
+  .progetto-desc p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+  }
+
+  .progetto-desc h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 }
 
@@ -2902,11 +3105,16 @@ footer {
   --webkit-column-count: 4;
   --moz-column-count: 4;
   column-gap: 30px;
-  grid-column-gap: 30px;
 }
 
 .info-container div {
   margin-bottom: 40px;
+}
+
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
 }
 
 @media screen and (max-width: 970px) {
@@ -2914,6 +3122,11 @@ footer {
     column-count: 2;
     --webkit-column-count: 2;
     --moz-column-count: 2;
+    
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2922,6 +3135,10 @@ footer {
     column-count: 1;
     --webkit-column-count: 1;
     --moz-column-count: 1;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2978,6 +3195,7 @@ footer {
     right: auto;
     left: 0;
 }
+
 
 /* -------------- COMPARE -------------- */
 

@@ -271,7 +271,7 @@ if (window.DeviceOrientationEvent && location.protocol == 'https:' &&
 // Compass
 var compass = document.createElement('div');
 compass.className = 'pnlm-compass pnlm-controls pnlm-control';
-uiContainer.appendChild(compass);
+controls.container.appendChild(compass);
 
 // Load and process configuration
 if (initialConfig.firstScene) {
