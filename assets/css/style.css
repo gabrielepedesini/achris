@@ -3631,7 +3631,7 @@ footer {
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid powderblue;
+  border-left: 0px solid rgb(253, 253, 253);
 }
 
 .back {
@@ -3693,15 +3693,31 @@ footer {
 
 /* Paper stack order */
 #p1 {
+  z-index: 7;
+}
+#p2 {
+  z-index: 6;
+}
+#p3 {
+  z-index: 5;
+}
+#p4 {
+  z-index: 4;
+}
+
+#p5 {
   z-index: 3;
 }
-
-#p2 {
+#p6 {
   z-index: 2;
 }
-
-#p3 {
+#p7 {
   z-index: 1;
+}
+
+.front-content img,
+.back-content img {
+  width: 100%;
 }
 
 @media screen and (max-width: 1090px) {
