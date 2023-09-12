@@ -119,66 +119,75 @@ a[href^="tel"] {
   background-color: var(--light-black);
 }
 
-.loader {
+#logo-intero {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 52px;
-  height: 60px;
-  border-radius: 50%;
+
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
 }
 
-.loader-7 .line {
-  width: 12px;
-  border-radius: 3px;
-  position: absolute;
-  bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff911a), to(#ffa546));
-  background: -webkit-linear-gradient(top, #ff911a, #ffa546);
-  background: -o-linear-gradient(top, #ff911a, #ffa546);
-  background: linear-gradient(to bottom, #ff911a, #ffa546);
-}
-
-.loader-7 .line1 {
-  left: 0;
-  -webkit-animation: line-grow 0.5s ease alternate infinite;
-  animation: line-grow 0.5s ease alternate infinite;
-}
-
-.loader-7 .line2 {
-  left: 20px;
-  -webkit-animation: line-grow 0.5s 0.2s ease alternate infinite;
-  animation: line-grow 0.5s 0.2s ease alternate infinite;
-}
-
-.loader-7 .line3 {
-  left: 40px;
-  -webkit-animation: line-grow 0.5s 0.4s ease alternate infinite;
-  animation: line-grow 0.5s 0.4s ease alternate infinite;
-}
-
-@-webkit-keyframes line-grow {
+/* Define keyframe animations */
+@keyframes outlineAnimation1 {
   0% {
-      height: 0;
+      stroke-dashoffset: 805;
   }
   100% {
-      height: 75%;
+      stroke-dashoffset: 5; /* Adjust this value based on your path length */
   }
 }
 
-@keyframes line-grow {
+@keyframes outlineAnimation2 {
   0% {
-      height: 0;
+      stroke-dashoffset: 5;
   }
   100% {
-      height: 75%;
+      stroke-dashoffset: 1605; /* Adjust this value based on your path length */
   }
+}
+
+@keyframes outlineAnimation3 {
+  0% {
+      stroke-dashoffset: 5;
+  }
+  100% {
+      stroke-dashoffset: 2005; /* Adjust this value based on your path length */
+  }
+}
+
+/* Apply animations to individual elements and change the color and stroke width */
+#triangle {
+  fill: none;
+  stroke: var(--orange); /* Color of the outline */
+  stroke-width: 18; /* Width of the outline */
+  stroke-dasharray: 405; /* Length of the outline path + 5px */
+  stroke-dashoffset: 405; /* Initially hides the outline */
+  animation: outlineAnimation1 1.5s linear infinite; /* Infinite loop with linear timing for a smoother transition */
+}
+
+#sx {
+  fill: none;
+  stroke: var(--orange); /* Color of the outline */
+  stroke-width: 18; /* Width of the outline */
+  stroke-dasharray: 805; /* Length of the outline path + 5px */
+  stroke-dashoffset: 805; /* Initially hides the outline */
+  animation: outlineAnimation2 1.5s linear infinite; /* Infinite loop with linear timing for a smoother transition */
+}
+
+#dx {
+  fill: none;
+  stroke: var(--orange); /* Color of the outline */
+  stroke-width: 18; /* Width of the outline */
+  stroke-dasharray: 1005; /* Length of the outline path + 5px */
+  stroke-dashoffset: 1005; /* Initially hides the outline */
+  animation: outlineAnimation3 1.5s linear infinite; /* Infinite loop with linear timing for a smoother transition */
 }
 
 .complete-animation {
   animation: fadeOut;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
 }
 
 .complete {
@@ -206,7 +215,7 @@ a[href^="tel"] {
   bottom: 60px;
   left: 60px;
   z-index: 1999;
-  width: 400px;
+  width: 450px;
   padding: 25px;
   background-color: hsla(0, 0%, 11%, 0.9);
   border-radius: 5px;
@@ -271,6 +280,7 @@ a[href^="tel"] {
 .cookies-container p a {
   color: var(--light-gray);
   font-size: 14px;
+  text-decoration: underline;
 }
 
 .cookies-btn {
@@ -314,6 +324,182 @@ a[href^="tel"] {
   background-color: transparent;
   border-radius: 5px;
   transition: .3s;
+}
+
+/* -------------- COOKIE CONFIGURATION ------------ */
+
+.cookie-modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  backdrop-filter: blur(4px); /* Apply a blur effect */
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-modal {
+  height: fit-content; /* Change height to auto */
+  width: 85%;
+  max-width: 700px; /* Change max-height to 70vh (viewport height) */
+  max-height: 75vh;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  padding: 30px;
+  animation: slideInDown;
+  animation-duration: 0.5s;
+  z-index: 100000000;
+  overflow-y: scroll;
+}
+
+.cookie-modal h3 {
+  font-family: 'K2D', sans-serif;
+  font-size: 36px;
+  color: var(--light-black);
+  margin-bottom: 15px;
+  position: relative;
+  height: fit-content;
+}
+
+.cookie-modal > p {
+  font-size: 16px;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  height: fit-content;
+}
+
+.cookie-modal > p > a {
+  color: #2e2e2e;
+  text-decoration: underline;
+}
+
+.choose-checkbox {
+  overflow: scroll;
+}
+
+.checkbox {
+  font-size: 24px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 80%;
+}
+
+.checkbox a {
+  color: var(--dark-gray);
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+}
+
+
+.checkbox a h5 {
+  color: var(--dark-gray);
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.checkbox a img {
+  height: 16px;
+  margin-top: 2px;
+  margin-left: 10px;
+  transition: .3s;
+}
+
+.check-desc {
+  margin-left: 38.39px;
+  height: 0px;
+  overflow: hidden;
+  transition: .3s;
+  max-width: 90%;
+}
+
+.height {
+  margin-left: 38.39px;
+  height: fit-content;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: .3s;
+}
+
+@media screen and (max-width: 520px) {
+  
+  .cookie-modal h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .cookie-modal > p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  .checkbox {
+    height: 40px;
+  }
+  
+  .checkbox a h5 {
+    font-size: 16px;
+  }
+
+  .check-desc {
+    font-size: 14px;
+    max-width: 95%;
+  }
+
+  .checkbox {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  
+  .cookie-modal h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .cookie-modal > p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  .checkbox {
+    height: 40px;
+  }
+
+  .checkbox a h5 {
+    font-size: 16px;
+  }
+
+  .check-desc {
+    font-size: 14px;
+  }
 }
 
 /* -----------------  NAVBAR ---------------- */
@@ -1414,6 +1600,7 @@ a[href^="tel"] {
 
 .flag-desc > a {
   color: #8b8b8b;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 520px) {
@@ -1555,9 +1742,16 @@ input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + labe
 
 input[type='checkbox']:checked + label > ins { height: 100%; }
 
+input[type='checkbox']:disabled + label > ins { height: 100%; }
+
 input[type='checkbox']:checked + label > span {
   border: .5em solid var(--orange);
   animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+input[type='checkbox']:disabled + label > span:hover {
+  border: 2px solid #9E9E9E;
+  cursor: not-allowed;
 }
 
 input[type='checkbox']:checked + label > span:before {
@@ -1571,6 +1765,7 @@ input[type='checkbox']:checked + label > span:before {
   transform-origin: 0% 50%; /* Adjust rotation origin */
   animation: checkbox-check 125ms 250ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
+
 
 @keyframes shrink-bounce {
   0% {
@@ -2341,13 +2536,13 @@ form {
 
 .button-form {
   background-color: transparent;
-  padding: 22px 10px;
+  padding: 22px 20px;
   color: var(--white);
   border: 2px solid var(--orange);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 5px;
-  width: 200px;
+  width: fit-content;
   align-self: left;
   text-decoration: none;
   transition: .3s;
@@ -2370,6 +2565,7 @@ form {
 
 .form-privacy-doc {
   color: var(--light-gray);
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
@@ -2387,6 +2583,12 @@ form {
     opacity: 1;
     font-family: 'Rubik', sans-serif;
   }
+
+  .button-form {
+    padding: 18px 16px;
+    font-size: 16px;
+  }
+  
 }
 
 @media screen and (max-height: 600px) {
@@ -2403,6 +2605,11 @@ form {
     font-weight: 300;
     opacity: 1;
     font-family: 'Rubik', sans-serif;
+  }
+
+  .button-form {
+    padding: 18px 16px;
+    font-size: 16px;
   }
 }
 
@@ -2800,7 +3007,7 @@ footer {
 }
 
 .p5 {
-  background-image: url("../images/p5.jpg");
+  background-image: url("../images/banner-5.avif");
   background-position: center;
   background-size: cover;
 
@@ -3226,6 +3433,10 @@ footer {
   background: #FF7504;
 }
 
+.scuola:before {
+  background: #0053a2;
+}
+
 .link--underline-effect:hover:before {
     width: 100%;
     right: auto;
@@ -3378,6 +3589,196 @@ footer {
     max-width: 250px;
   }
 }
+
+/* -------------- LIBRO -------------- */
+
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  transition: transform 0.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+
+}
+
+.front,
+.back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+}
+
+.back {
+  z-index: 0;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-content {
+  transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+.book-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 20px;
+  transition: transform 0.5s;
+}
+
+.sposta-sinistra {
+  transform: translateX(-140px);
+  transition: transform 0.5s;
+}
+
+.sposta-destra {
+  transform: translateX(140px);
+  transition: transform 0.5s;
+}
+
+.book-btn:focus {
+  outline: none;
+  opacity: 1;
+  transition: .3s;
+}
+
+.book-btn:hover img {
+  opacity: .7;
+  transition: .3s;
+}
+
+.book-btn img {
+  width: 40px;
+}
+
+/* Paper stack order */
+#p1 {
+  z-index: 3;
+}
+
+#p2 {
+  z-index: 2;
+}
+
+#p3 {
+  z-index: 1;
+}
+
+@media screen and (max-width: 1090px) {
+  
+  .book-container {
+    width: 100%;
+  }
+
+  .book {
+    position: relative;
+    width: 210px;
+    height: 300px;
+    transition: transform 0.5s;
+  }
+
+  .sposta-sinistra {
+    transform: translateX(-110px);
+    transition: transform 0.5s;
+  }
+  
+  .sposta-destra {
+    transform: translateX(110px);
+    transition: transform 0.5s;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  
+  .book-container {
+    width: 100%;
+  }
+
+  .book {
+    position: relative;
+    width: 140px;
+    height: 200px;
+    transition: transform 0.5s;
+  }
+
+  .sposta-sinistra {
+    transform: translateX(-70px);
+    transition: transform 0.5s;
+  }
+  
+  .sposta-destra {
+    transform: translateX(70px);
+    transition: transform 0.5s;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  
+  .book-container {
+    width: 100%;
+  }
+
+  .book {
+    position: relative;
+    width: 105px;
+    height: 150px;
+    transition: transform 0.5s;
+  }
+
+  .sposta-sinistra {
+    transform: translateX(-50px);
+    transition: transform 0.5s;
+  }
+  
+  .sposta-destra {
+    transform: translateX(50px);
+    transition: transform 0.5s;
+  }
+
+  .book-btn img {
+    width: 30px;
+  }
+}
+
 
 /* -------------- SELECTOR -------------- */
 
@@ -3685,4 +4086,13 @@ footer {
 .cosplayer-button:hover {
   border: 2px solid #8f65bf;
   background-color: #8f65bf;
+}
+
+.scuola-button {
+  border: 2px solid #0053a2;
+}
+
+.scuola-button:hover {
+  border: 2px solid #0053a2;
+  background-color: #0053a2;
 }

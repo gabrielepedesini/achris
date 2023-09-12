@@ -39,11 +39,14 @@
         <div class="internal-cont">
             <div class="striscia" id="s-up"></div>
             <div class="striscia" id="s-down"></div>
-            <div class="loader loader-7" id="preloader">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-            </div>
+            <svg version="1.1" id="logo-intero" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+                <g id="logo">
+                    <polygon id="triangle" points="378.215,626.333 452.197,626.333 415.206,546.833"/>
+                    <polygon id="sx" points="517.623,284.326 716.219,718.667 557.799,718.667 437.481,459.09"/>
+                    <polyline id="dx" points="414.655,59.127 489.218,222.204 261.573,718.667 103.906,718.667 414.655,59.127"/>
+                </g>
+            </svg>
         </div>
     </div>
 
@@ -62,9 +65,64 @@
         </p>
 
         <div class="cookies-btn">
-            <a id="decline-cookie" class="cookie-d">Impedisci</a>
+            <a id="config-cookie" class="cookie-d">Configura</a>
             <a id="accept-cookie" class="cookie-a">Consenti</a>
         </div>
+    </div>
+
+    <div class="cookie-modal-container" id="cookie-modal">
+
+        <div class="cookie-modal" id="cookie-modal-box">
+            <h3>Configurazione Cookies</h3>
+            <p>
+                Questo sito usa i cookies per permetterti di avere un'esperienza di navigazione migliore.
+                
+                Dai un'occhiata all'<a href="">Informativa sulla privacy</a>.
+            </p>
+    
+            <div class="choose-checkbox">
+                <div class="checkbox">
+                    <input id='two' type='checkbox' class="checkbox1" id="checkbox1" checked>
+                    <label for='two'>
+                        <span></span>
+                        <ins><i></i></ins>
+                    </label>
+
+                    <a id="show-desc-1">
+                        <h5>Cookies essenziali</h5>
+                        <img src="assets/images/up-arrow.svg" alt="" id="arrow-1">
+                    </a>
+                </div>
+
+                <div class="check-desc" id="desc-1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa deleniti laudantium aut et praesentium. Rerum earum impedit distinctio minima possimus accusantium, at reprehenderit est illum, maiores doloribus velit qui molestias?
+                </div>
+
+                <div class="checkbox">
+                    <input id='three' type='checkbox' class="checkbox2" id="checkbox2" checked>
+                    <label for='three'>
+                        <span></span>
+                        <ins><i></i></ins>
+                    </label>
+
+                    <a id="show-desc-2">
+                        <h5>Cookies di Analisi</h5>
+                        <img src="assets/images/up-arrow.svg" alt="" id="arrow-2">
+                    </a>
+                </div>
+
+                <div class="check-desc" id="desc-2">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa deleniti laudantium aut et praesentium. Rerum earum impedit distinctio minima possimus accusantium, at reprehenderit est illum, maiores doloribus velit qui molestias?
+                </div>
+            </div>
+    
+            <div class="cookies-btn">
+                <a id="close-cookie" class="cookie-d" style="color: #090909;">Chiudi</a>
+                <a id="save-cookie" class="cookie-a">Salva</a>
+            </div>
+
+        </div>
+
     </div>
 
     <!-------------------- HEADER --------------------------->

@@ -1,6 +1,6 @@
 /* redirect + preloader */
 
-var loader = document.getElementById('preloader');
+var loader = document.getElementById('logo-intero');
 var loadercont = document.getElementById('loader-cont');
 var slideup = document.getElementById('s-up');
 var slidedown = document.getElementById('s-down');
@@ -47,25 +47,27 @@ function detectLanguageAndRedirect() {
 
 function handleCompleteAnimation() {
   // Handle the loader animations after the response is received and redirection is done.
-  $(loader).addClass("complete-animation");
+  setTimeout(function() {
+    $(loader).addClass("complete-animation");
+  }, 500);
   setTimeout(function() {
     $(loader).addClass("complete");
-  }, 500);
+  }, 1000);
   setTimeout(function() {
     $(slideup).addClass("complete-up-animation");
-  }, 500);
+  }, 1000);
   setTimeout(function() {
     $(slidedown).addClass("complete-down-animation");
-  }, 500);
+  }, 1000);
   setTimeout(function() {
     $(slideup).addClass("complete");
-  }, 1500);
+  }, 2000);
   setTimeout(function() {
     $(slidedown).addClass("complete");
-  }, 1500);
+  }, 2000);
   setTimeout(function() {
     $(loadercont).addClass("complete");
-  }, 1500);
+  }, 2000);
 }
 
 // Call the detectLanguageAndRedirect function when the page is ready.
