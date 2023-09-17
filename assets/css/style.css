@@ -3015,6 +3015,14 @@ footer {
   padding: 0;
 }
 
+.p6 {
+  background-image: url("../images/banner-6.avif");
+  background-position: center;
+  background-size: cover;
+
+  padding: 0;
+}
+
 .color {
   height: 100%;
   width: 100%;
@@ -3436,6 +3444,10 @@ footer {
 
 .scuola:before {
   background: #0053a2;
+}
+
+.lj:before {
+  background: #FF2805;
 }
 
 .link--underline-effect:hover:before {
@@ -4112,4 +4124,13 @@ footer {
 .scuola-button:hover {
   border: 2px solid #0053a2;
   background-color: #0053a2;
+}
+
+.lj-button {
+  border: 2px solid #FF2805;
+}
+
+.lj-button:hover {
+  border: 2px solid #FF2805;
+  background-color: #FF2805;
 }
