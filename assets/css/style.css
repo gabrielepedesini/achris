@@ -693,7 +693,7 @@ a[href^="tel"] {
   position: relative;
   overflow: hidden;
   width: 500px;
-  height: 110px; /* Altezza aumentata per separare le scritte verticalmente */
+  height: 130px; /* Altezza aumentata per separare le scritte verticalmente */
 }
 
 .portfolio-item p {
@@ -749,7 +749,7 @@ a[href^="tel"] {
 }
 
 .portfolio-title-alt {
-  transform: translateY(75px);
+  transform: translateY(90px);
 }
 
 .portfolio-item:hover .portfolio-title {
@@ -760,7 +760,7 @@ a[href^="tel"] {
   transform: translateY(0);
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 670px) {
   
   .portfolio-item {
     height: 64px; /* Altezza aumentata per separare le scritte verticalmente */
@@ -784,7 +784,7 @@ a[href^="tel"] {
     font-size: 36px;
     line-height: 30px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
   }
 
   .closebtn {
@@ -2826,6 +2826,7 @@ footer {
   font-size: 16px;
   color: #414141;
   text-align: center;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 520px) {
