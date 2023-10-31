@@ -952,6 +952,23 @@ a[href^="tel"] {
 
 
 
+.video-hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.video-hero video {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+
+  z-index: 9;
+
+  filter: brightness(50%);
+}
+
 .down-arrow-progetti .scroll-button {
   position: relative;
   cursor: pointer;
@@ -1008,6 +1025,10 @@ a[href^="tel"] {
   margin: 0;
   left: calc(50vw - 25px);
   color: var(--white);
+
+  text-shadow: 0px 0px 10px rgba(204, 204, 204, 0.15);
+
+  z-index: 10;
 }
 
 .underline--magical {
@@ -1061,6 +1082,10 @@ a[href^="tel"] {
   }
 
   .carousel-item {
+    height: 550px;
+  }
+
+  .video-hero {
     height: 550px;
   }
 
@@ -1178,11 +1203,114 @@ a[href^="tel"] {
     height: 100vh;
   }
 
+  .video-hero {
+    height: 100vh;
+  }
+
   .down-arrow{
     display: none;
   }
 }
 
+
+/* -------- LINGUA ----------- */
+
+.lang-container {
+  position: sticky;
+  top: 40vh;
+  z-index: 503;
+}
+
+.lang-container-inner {
+  top: 15px;
+  left: -75px;
+  position: absolute;
+  height: 45px;
+  width: 130px;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  
+  transition: left 0.5s, height 0.5s;
+}
+
+.lang-container-inner:hover {
+  top: 15px;
+  left: 0px;
+  position: absolute;
+  height: 135px;
+  width: 130px;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  transition-delay: 0s, 0.2s;
+}
+
+.lang-yes {
+  cursor: default;
+}
+
+.lang-yes div {
+  color: var(--white);
+}
+
+.lang-yes,
+.lang-not {
+  position: absolute;
+  height: 45px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: #181818
+}
+
+.lang-yes a,
+.lang-not a {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.lang-yes a div,
+.lang-not a div {
+  height: fit-content;
+  width: 70px;
+
+  transition: .2s;
+}
+
+.lang-yes a img,
+.lang-not a img {
+  height: 25px;
+  border-radius: 3px;
+  transition: .2s;
+}
+
+.lang-not div {
+  color: var(--dark-gray);
+  transition: .2s;
+}
+
+.lang-not:hover div {
+  color: var(--white);
+  transition: .2s;
+}
+
+.lang-not a img {
+  filter: brightness(50%);
+}
+
+.lang-not:hover img {
+  filter: brightness(100%);
+  transition: .2s;
+}
+
+.lang-container div:nth-child(2) {
+  top: 45px;
+}
+
+.lang-container div:nth-child(3) {
+  top: 90px;
+}
 
 /* --------------  PORTFOLIO -------------- */
 
@@ -1895,6 +2023,8 @@ input[type='checkbox']:checked + label > span:before {
   font-weight: 400;
   line-height: 18px;
   color: var(--dark-gray);
+
+  cursor: default;
 }
 
 .vert {

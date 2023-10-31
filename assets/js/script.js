@@ -68,10 +68,28 @@ function handleCompleteAnimation() {
   }, 2000);
 }
 
-// Call the detectLanguageAndRedirect function when the page is ready.
-$(document).ready(function() {
-  detectLanguageAndRedirect();
-});
+function cookieExists(name) {
+  const cookies = document.cookie.split('; ');
+  for (const cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.split('=');
+      if (cookieName === name) {
+          return true;
+      }
+  }
+  return false;
+}
+
+if (cookieExists("lang-cookie")) {
+  
+  handleCompleteAnimation();
+
+} else {
+  
+  $(document).ready(function() {
+    detectLanguageAndRedirect();
+  });
+
+}
 
 /* navbar */
 
@@ -202,22 +220,50 @@ if($(window).scrollTop()+height > offsetTop) {
 
 /* counters */
 
-var number = 0;
-
-function animateCounter() {
-  if (number !== 1) {
-    $(".num").counterUp({
-      delay: 10,
-      time: 800,
-    });
-
-    number = 1;
-  }
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      counterUp();
+      observer.disconnect();
+    }
+  });
 }
 
-// Call animateCounter every 1000 milliseconds (1 second)
-setInterval(animateCounter, 1000);
+const targetElement = document.querySelector('.container-counters');
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0,
+};
 
+const observer = new IntersectionObserver(handleIntersection, options);
+
+observer.observe(targetElement);
+
+function counterUp() {
+  console.log('Element is visible!');
+  const counterNumbers = document.querySelectorAll('.num');
+
+  counterNumbers.forEach(num => {
+    const meta = parseInt(num.innerHTML);
+    num.innerHTML = 0;
+    let iteration = 0;
+    const interDelay = 25;
+
+    const increment = () => {
+      if (iteration < 70) {
+        num.innerHTML = parseInt(num.innerHTML) + Math.ceil(meta / 70);
+        iteration++;
+        setTimeout(increment, interDelay);
+      } else {
+        num.innerHTML = meta;
+      }
+    };
+
+    increment();
+    
+  });
+}
 
 /* data */
 

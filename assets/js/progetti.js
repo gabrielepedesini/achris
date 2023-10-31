@@ -70,10 +70,29 @@ function handleCompleteAnimation() {
   }, 2000);
 }
 
-// Call the detectLanguageAndRedirect function when the page is ready.
-$(document).ready(function() {
-  detectLanguageAndRedirect();
-});
+
+function cookieExists(name) {
+  const cookies = document.cookie.split('; ');
+  for (const cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.split('=');
+      if (cookieName === name) {
+          return true;
+      }
+  }
+  return false;
+}
+
+if (cookieExists("lang-cookie")) {
+  
+  handleCompleteAnimation();
+
+} else {
+  
+  $(document).ready(function() {
+    detectLanguageAndRedirect();
+  });
+
+}
 
 /* navbar */
 
