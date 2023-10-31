@@ -12,8 +12,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -61,7 +59,7 @@
         
         <p>
             Noi e terze parti selezionate utilizziamo cookie e tecnologie simili per finalità tecniche e, con il tuo
-            consenso, anche per le finalità di esperienza e misurazione come specificato nella <a href="cookiepolicy.html" target="_blank">Cookie Policy</a>.
+            consenso, anche per le finalità di esperienza e misurazione come specificato nella <a href="cookiepolicy.html" target="_blank">Informativa sui Cookie</a>.
             <br>
             Puoi liberamente prestare, rifiutare o revocare il tuo consenso, in qualsiasi momento.
             <br>
@@ -83,7 +81,7 @@
                 Le opzioni disponibili in questa sezione ti permettono di personalizzare le preferenze relative al consenso
                 per qualsiasi tecnologia di tracciamento utilizzata per le finalità descritte di seguito. Per ottenere ulteriori
                 informazioni in merito all'utilità e al funzionamento di tali strumenti di tracciamento, fai riferimento alla
-                <a href="cookiepolicy.html" target="_blank">Cookie Policy</a>.
+                <a href="cookiepolicy.html" target="_blank">Informativa sui Cookie</a>.
             </p>
     
             <div class="choose-checkbox">
@@ -185,7 +183,7 @@
 
     <main>
       
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
           
           <div class="carousel-inner">
             <div class="carousel-item active bg1" data-bs-interval="4000">
@@ -237,7 +235,29 @@
             </div>
           </a>
 
-        </div>
+        </div> -->
+
+        <div class="video-hero">
+
+            <video src="../assets/images/homepage-animation.webm" type="video/webm" autoplay muted loop>
+            </video>
+  
+            <h1 class="carousel-title">
+              Ciao! Sono Christian, 
+              un 
+              <span class="underline--magical">designer</span> 
+              italiano.
+            </h1>
+  
+            <a href="#portfolio" class="down-arrow">
+              <div class="scroll-button">
+                  <div class="oval">
+                    <div class="line-down"></div>
+                  </div>
+              </div>
+            </a>
+  
+          </div>
 
 
         <!-------------- PORTFOLIO -------------------->
@@ -249,25 +269,36 @@
         <div class="spacer"></div>
         <div class="spacer"></div>
 
-        <!-------------------- LANGUAGE 
+        <!-------------- LANGUAGE --------------->
 
         <div class="lang-container">
 
-            <div class="lang-not">
-                <a href="../en/index.html">
-                    <img src="../assets/images/usa.png" alt="">
-                </a>
-            </div>
-    
-            <div class="lang-yes">
-                <a>
-                    <img src="../assets/images/ita.jpg" alt="">
-                </a>
-            </div>
-    
-        </div>
+            <div class="lang-container-inner">
 
-        --------------------------->
+                <div class="lang-yes">
+                    <a>
+                        <div>Italiano</div>
+                        <img src="../assets/images/ita.jpg" alt="">
+                    </a>
+                </div>
+    
+                <div class="lang-not">
+                    <a href="../en/index.html" class="lang-btn">
+                        <div>English</div>
+                        <img src="../assets/images/usa.png" alt="">
+                    </a>
+                </div>
+
+                <div class="lang-not">
+                    <a href="../jp/index.html" class="lang-btn">
+                        <div>日本</div>
+                        <img src="../assets/images/jap.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
 
         <section class="portfolio">
             <div class="container portfolio-container">
@@ -376,7 +407,11 @@
                         <a class="down-close" id="download-close">&times;</a>
 
                         <h3>Scarica i file</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p>
+                            Prima di scaricare dei contenuti da questo sito ti chiediamo di accettare i seguenti Termini e Condizioni.
+                            
+                            Assicurati di leggerli bene prima di procedere al download.
+                        </p>
 
                         <div class="flag-container" id="checkbox-container">
                             <input id='one' type='checkbox' class="download-checkbox" id="flag-checkbox">
@@ -807,6 +842,7 @@
       </script>
 
     <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/cookielanguage.js"></script>
     <script src="assets/js/scrollup.js"></script>
     <script src="assets/js/script.js"></script>
     
