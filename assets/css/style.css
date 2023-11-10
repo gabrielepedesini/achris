@@ -1181,6 +1181,10 @@ a[href^="tel"] {
   .carousel-control-prev {
     display: none;
   }
+
+  .video-hero {
+    height: 420px;
+  }
 }
 
 @media screen and (max-height: 520px) {
