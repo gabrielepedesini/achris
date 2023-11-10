@@ -1066,6 +1066,10 @@ a[href^="tel"] {
     color: var(--white);
     letter-spacing: -1%;
   }
+
+  .video-hero {
+    height: 60vh;
+  }
 }
 
 @media screen and (max-width: 800px) {
