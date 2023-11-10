@@ -77,6 +77,12 @@ a[href^="tel"] {
   height: 30px;
 }
 
+@media screen and (max-width: 550px) {
+  .spacer {
+    height: 20px;
+  } 
+}
+
 .gap {
   height: 100vh;
   z-index: 1000;
