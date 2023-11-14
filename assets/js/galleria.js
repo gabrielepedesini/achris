@@ -37,5 +37,11 @@ imageLinks.forEach(link => {
         document.body.removeChild(fullscreenContainer);
       }
     });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        document.body.removeChild(fullscreenContainer);
+      }
+    });
   });
 });
