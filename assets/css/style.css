@@ -929,6 +929,7 @@ a[href^="tel"] {
   cursor: pointer;
   width: 40px;
   height: 70px;
+  transition: .3s;
 }
 
 .oval {
@@ -943,6 +944,7 @@ a[href^="tel"] {
   align-items: center;
   border: 1px solid #fff;
   overflow: hidden;
+  transition: .3s;
 }
 
 .line-down {
@@ -953,9 +955,22 @@ a[href^="tel"] {
 
 .down-arrow:hover .line-down {
   animation: scrollAnimation 1.5s infinite;
+  animation-delay: .5s;
 }
 
+.down-arrow:not(:hover) .oval {
+  animation: UpDown 1s infinite;
+  transition: .3s;
+}
 
+@keyframes UpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
 
 
 .video-hero {
@@ -1002,20 +1017,22 @@ a[href^="tel"] {
   background-color: #fff;
 }
 
+.down-arrow-progetti:not(:hover) .oval {
+  animation: UpDown 1.2s infinite;
+  transition: .3s;
+}
+
 @keyframes scrollAnimation {
   0%, 70%, 100% {
     transform: translateY(0);
-    opacity: 1;
     transition-timing-function: ease-out;
   }
   30% {
     transform: translateY(40px);
-    opacity: 0;
     transition-timing-function: ease-out;
   }
   40% {
     transform: translateY(-40px);
-    opacity: 0;
     transition-timing-function: ease-out;
   }
 }
