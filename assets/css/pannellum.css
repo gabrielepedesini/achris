@@ -409,8 +409,10 @@ div.pnlm-tooltip:hover span:after {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background-image: url('../images/compass.svg');
+    background-image: url('../images/compass-hover.svg');
     cursor: default;
+
+    transition: .2s;
 }
 
 .pnlm-world {
