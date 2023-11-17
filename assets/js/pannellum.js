@@ -271,6 +271,7 @@ if (window.DeviceOrientationEvent && location.protocol == 'https:' &&
 // Compass
 var compass = document.createElement('div');
 compass.className = 'pnlm-compass pnlm-controls pnlm-control';
+compass.addEventListener('click', resetNorth); 
 controls.container.appendChild(compass);
 
 // Load and process configuration
@@ -2326,6 +2327,11 @@ function loadScene(sceneId, targetPitch, targetYaw, targetHfov, fadeDone) {
     }
     fireEvent('scenechange', sceneId);
     load();
+}
+
+function resetNorth() {
+  config.yaw = config.northOffset;  
+  animateInit();
 }
 
 /**

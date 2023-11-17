@@ -1,5 +1,7 @@
 /* redirect + preloader */
 
+var preloaderComplete = false;
+
 var loader = document.getElementById('logo-intero');
 var loadercont = document.getElementById('loader-cont');
 var slideup = document.getElementById('s-up');
@@ -46,7 +48,9 @@ function detectLanguageAndRedirect() {
 }
 
 function handleCompleteAnimation() {
-  // Handle the loader animations after the response is received and redirection is done.
+  
+  preloaderComplete = true;
+
   setTimeout(function() {
     $(loader).addClass("complete-animation");
   }, 500);
@@ -93,6 +97,37 @@ if (cookieExists("lang-cookie")) {
   });
 
 }
+
+/* ad block checker */
+
+function adBlockCheck() {
+  
+  let adBlockDetected = false;
+  
+  if(!preloaderComplete) {
+
+    var testAd = document.createElement('div');
+    testAd.innerHTML = '&nbsp;';
+    testAd.className = 'adblock-test';
+    document.body.appendChild(testAd);
+
+    if (testAd.offsetHeight === 0) {
+        adBlockDetected = true;
+    }
+    testAd.remove();
+
+
+    if(!adBlockDetected) {
+      
+      adBlockContainer = document.querySelector('.container-adblock');
+
+      adBlockContainer.style.display = "flex";
+    }
+
+  }
+}
+
+setTimeout(adBlockCheck, 5000);
 
 /* navbar */
 
