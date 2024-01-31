@@ -1649,7 +1649,7 @@ a[href^="tel"] {
 }
 
 .project-img img:hover {
-  width: 120%;
+  transform: scale(1.2); 
   border-radius: 5px;
   transition: 1s;
 }
@@ -3694,7 +3694,7 @@ th {
 }
 
 .image-link img:hover {
-  transform: scale(1.2); /* Scale the image on hover */
+  transform: scale(1.2); 
   transition: transform 1s;
 }
 
