@@ -2065,7 +2065,7 @@ a[href^="tel"] {
 }
 
 /* Corrected Custom Checkbox Styles */
-input[type='checkbox'] { height: 0; width: 0; }
+input[type='checkbox'] { height: 0; width: 0; display: none;}
 
 input[type='checkbox'] + label {
   position: relative;
