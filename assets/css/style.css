@@ -229,6 +229,10 @@ a[href^="tel"] {
   flex-direction: column;
 }
 
+.adblock-computer {
+  width: 180px;
+}
+
 .adblock-title {
   display: flex;
   align-items: center;
