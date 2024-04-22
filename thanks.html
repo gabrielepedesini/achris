@@ -60,6 +60,55 @@
 </head>
 <body>
 
+    <!----------------- HEADER ------------------------>
+
+    <header>
+
+        <div class="navbar">
+            
+            <a href="index.html" class="logo-btn">
+                <img src="../assets/images/a.png" alt="" class="logo">
+            </a>
+
+            <div class="hamburger hamburger--collapse-r" id="hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="myNav" class="overlay">
+            
+            <nav class="overlay-content">
+
+                <ul class="portfolio-list">
+                    <li class="portfolio-item">
+                        <a class="portfolio-title" onclick="closeNav()" href="index.html#portfolio">PORTFOLIO</a>
+                        <a class="portfolio-title-alt" onclick="closeNav()" href="index.html#portfolio">PORTFOLIO</a>
+                        <p class="n-1">01</p>
+                    </li>
+                    <li class="portfolio-item">
+                        <a class="portfolio-title" onclick="closeNav()" href="index.html#servizi">SERVIZI</a>
+                        <a class="portfolio-title-alt" onclick="closeNav()" href="index.html#servizi">SERVIZI</a>
+                        <p class="n-2">02</p>
+                    </li>
+                    <li class="portfolio-item">
+                        <a class="portfolio-title" onclick="closeNav()" href="index.html#skills">SKILLS</a>
+                        <a class="portfolio-title-alt" onclick="closeNav()" href="index.html#skills">SKILLS</a>
+                        <p class="n-3">03</p>
+                    </li>
+                    <li class="portfolio-item">
+                        <a class="portfolio-title" onclick="closeNav()" href="index.html#contatti">CONTATTI</a>
+                        <a class="portfolio-title-alt" onclick="closeNav()" href="index.html#contatti">CONTATTI</a>
+                        <p class="n-4">04</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
     <div class="grazie-full">
         <div class="grazie-container">
             <p class="grazie-text">Grazie per il messaggio!</p>
@@ -67,6 +116,10 @@
             <a href="index.html" class="return">Torna al sito</a>
         </div>
     </div>
+
+    <!--------- SCRIPT ---------->
+
+    <script src="assets/js/header.js"></script>
     
 </body>
 </html>
