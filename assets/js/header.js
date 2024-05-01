@@ -29,3 +29,21 @@ hamburger.addEventListener("click", function() {
     openNav();
   }
 })
+
+/* background color on scroll */
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+
+  var scrollY = window.scrollY;
+
+  console.log(scrollY);
+
+  if (scrollY >= 200) {
+    navbar.classList.add('navbar-background');
+} else {
+    navbar.classList.remove('navbar-background');
+}
+
+});
