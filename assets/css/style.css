@@ -1286,6 +1286,7 @@ a[href^="tel"] {
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
+  border-radius: 3px;
   transition: background-size 0.25s ease-in;
   &:hover {
     background-size: 100% 88%;
@@ -2257,6 +2258,8 @@ input[type='checkbox']:checked + label > span:before {
 @media screen and (max-width: 768px) {
   .servizi-desc {
     width: 100%;
+    height: fit-content;
+    margin-bottom: 50px;
   }
 }
 
@@ -2308,18 +2311,9 @@ input[type='checkbox']:checked + label > span:before {
   }
 
   .servizi-desc {
-    height: 220px;
-  }
-}
-
-@media screen and (max-height: 520px) {
-  .servizi-desc h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .servizi-desc {
-    height: 220px;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 50px;
   }
 }
 
