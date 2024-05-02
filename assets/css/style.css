@@ -3513,7 +3513,14 @@ footer {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 650px) {
+  
+  .error404-images {
+    height: 350px;
+  }
+}
+
+@media (max-width: 500px) {
   
   .error404-images {
     height: 280px;
