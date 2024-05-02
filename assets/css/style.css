@@ -3403,10 +3403,90 @@ footer {
   position: relative;
 }
 
-.sketch .sketch-404 {
+.sketch div {
+  height: fit-content;
   width: 80%;
   max-width: 450px;
+  position: relative;
   transform: rotate(10deg);
+}
+
+.sketch .sketch-404 {
+  width: 100%;
+}
+
+.sketch .griglia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.sketch .quadrato {
+  width: 10px;
+  display: none;
+}
+
+.sketch .quadrato-1 {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  transform: rotate(-10deg);
+}
+
+.sketch .quadrato-2 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  transform: rotate(-10deg);
+}
+
+.sketch .quadrato-3 {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  transform: rotate(-10deg);
+}
+
+.sketch .quadrato-4 {
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  transform: rotate(-10deg);
+}
+
+.sketch .quadrato-5 {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+.sketch .quadrato-6 {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+.sketch .quadrato-7 {
+  position: absolute;
+  top: -5px;
+  right: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+}
+
+.sketch .quadrato-8 {
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+}
+
+.sketch div:hover > .griglia,
+.sketch div:hover > .quadrato {
+  display: block;
 }
 
 @media (max-width: 1200px) {
@@ -3425,7 +3505,7 @@ footer {
     display: none;
   }
 
-  .sketch .sketch-404 {
+  .sketch div {
     position: absolute;
     top: 50%;
     left: 50%;
