@@ -2749,6 +2749,7 @@ input[type='checkbox']:checked + label > span:before {
   font-size: 60px;
   color: var(--white);
   letter-spacing: -1%;
+  width: 95%;
   
   margin-bottom: 80px;
 }
