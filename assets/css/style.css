@@ -1647,13 +1647,13 @@ a[href^="tel"] {
 
 @media screen and (max-width: 520px) {
   .portfolio-column h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
 @media screen and (max-height: 520px) {
   .portfolio-column h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
@@ -2250,14 +2250,14 @@ input[type='checkbox']:checked + label > span:before {
 
 @media screen and (max-width: 520px) {
   .servizi-box h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
 
 @media screen and (max-height: 520px) {
   .servizi-box h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
@@ -2386,14 +2386,14 @@ input[type='checkbox']:checked + label > span:before {
 
 @media screen and (max-width: 520px) {
   .skills h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
 
 @media screen and (max-height: 520px) {
   .skills h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
@@ -2767,14 +2767,14 @@ input[type='checkbox']:checked + label > span:before {
 
 @media screen and (max-width: 520px) {
   .contatti-desc h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
 
 @media screen and (max-height: 520px) {
   .contatti-desc h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 40px;
   }
 }
