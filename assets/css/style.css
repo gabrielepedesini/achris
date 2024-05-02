@@ -3312,6 +3312,10 @@ footer {
 
 /* ---------- ERROR 404 --------- */
 
+.error404-body {
+  background-color: var(--white);
+}
+
 .inverted {
   filter: invert();
 }
