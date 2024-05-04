@@ -1451,7 +1451,7 @@ a[href^="tel"] {
   }
 
   .video-hero {
-    height: 420px;
+    height: 450px;
   }
 
   .hero-title p {
@@ -1588,6 +1588,8 @@ a[href^="tel"] {
 
 .portfolio {
   width: 100%;
+  background-color: var(--light-black);
+  padding: 80px 0;
 }
 
 .portfolio-container {
@@ -2206,6 +2208,11 @@ input[type='checkbox']:checked + label > span:before {
 
 
 /* --------------  SERVIZI --------------- */
+
+.servizi {
+  background-color: var(--light-black);
+  padding: 80px 0 60px 0;
+}
 
 .servizi-box {
   width: 70%;
