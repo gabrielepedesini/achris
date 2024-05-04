@@ -3567,7 +3567,7 @@ footer {
 
 @media screen and (max-width: 800px) {
   .container-policy h2 {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
   }
   
@@ -3579,7 +3579,7 @@ footer {
 
 @media screen and (max-height: 800px) {
   .container-policy h2 {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
   }
   
@@ -3590,8 +3590,9 @@ footer {
 
 @media screen and (max-width: 520px) {
   .container-policy h2 {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 15px;
+    text-align: left !important;
   }
   
   .container-policy p {
@@ -3601,8 +3602,9 @@ footer {
 
 @media screen and (max-height: 520px) {
   .container-policy h2 {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 15px;
+    text-align: left !important;
   }
   
   .container-policy p {
@@ -3611,14 +3613,15 @@ footer {
 }
 
 .container-policy {
-  width: 80%;
-  max-width: 800px;
-}  
+  max-width: 1140px;
+  width: 90%;
+  padding: 0;
+}
 
-@media screen and (max-width: 856px) {
-  .container-policy {
-    width: 75%;
-  }  
+@media (max-width: 600px) {
+    .container-policy  {
+      width: 85%;
+    }
 }
 
 .container-policy .bold {
