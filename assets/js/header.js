@@ -40,7 +40,7 @@ window.addEventListener('scroll', function() {
 
   console.log(scrollY);
 
-  if (scrollY >= 200) {
+  if (scrollY >= 50) {
     navbar.classList.add('navbar-background');
 } else {
     navbar.classList.remove('navbar-background');
