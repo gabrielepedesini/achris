@@ -3284,6 +3284,17 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 800px) {
+
+  .grazie-text {
+    font-size: 40px;
+  }
+  
+  .if-return {
+    font-size: 18px;
+  }
+}
+
 .return {
   background-color: transparent;
   padding: 10px 16px;
@@ -3354,6 +3365,17 @@ footer {
   margin-bottom: 10px;
   font-size: 20px;
   text-align: center;
+}
+
+@media (max-width: 800px) {
+
+  .error404-text h1 {
+    font-size: 40px;
+  }
+  
+  .error404-text p {
+    font-size: 18px;
+  }
 }
 
 .error404-btn {
