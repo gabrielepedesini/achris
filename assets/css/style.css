@@ -45,11 +45,11 @@ body {
 }
 
 ::-moz-selection {   /* Code for Firefox */
-  background: #ccc5be;
+  background: var(--light-gray);
 }
 
 ::selection {
-  background: #ccc5be;
+  background: var(--light-gray);
 }
 
 a {
