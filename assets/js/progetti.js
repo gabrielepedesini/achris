@@ -77,8 +77,10 @@ function handleCompleteAnimation() {
   }, 2000);
 }
 
-document.addEventListener('load', handleCompleteAnimation);
-
+document.addEventListener('DOMContentLoaded', () => {
+  
+  handleCompleteAnimation();
+});
 /*
 
 function cookieExists(name) {
@@ -135,4 +137,3 @@ function adBlockCheck() {
 }
 
 setTimeout(adBlockCheck, 1000);
-
