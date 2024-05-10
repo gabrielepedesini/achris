@@ -109,31 +109,30 @@ if (cookieExists("lang-cookie")) {
 /* ad block checker */
 
 function adBlockCheck() {
-  
-  let adBlockDetected = false;
-  
-  if(!preloaderComplete) {
 
-    var testAd = document.createElement('div');
-    testAd.innerHTML = '&nbsp;';
-    testAd.className = 'adblock-test';
-    document.body.appendChild(testAd);
+  var ADS_URL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
 
-    if (testAd.offsetHeight === 0) {
-        adBlockDetected = true;
-    }
-    testAd.remove();
-
-
-    if(!adBlockDetected) {
-      
-      adBlockContainer = document.querySelector('.container-adblock');
-
-      adBlockContainer.style.display = "flex";
-    }
-
+  function checkAdsBlocked(callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+              callback(xhr.status === 0 || xhr.responseURL !== ADS_URL);
+          }
+      };
+      xhr.open('HEAD', ADS_URL, true);
+      xhr.send(null);
   }
+
+  checkAdsBlocked(function(adsBlocked) {
+
+      if(adsBlocked) {
+        const adBlockContainer = document.querySelector(".container-adblock");
+        if (adBlockContainer) {
+          adBlockContainer.style.display = "flex";
+        }
+      }
+  });
 }
 
-setTimeout(adBlockCheck, 5000);
+setTimeout(adBlockCheck, 1000);
 
