@@ -7,6 +7,7 @@ var loadercont = document.getElementById('loader-cont');
 var slideup = document.getElementById('s-up');
 var slidedown = document.getElementById('s-down');
 
+/*
 
 function detectLanguageAndRedirect() {
   // Show the loader before making the AJAX request.
@@ -47,6 +48,8 @@ function detectLanguageAndRedirect() {
   });
 }
 
+*/
+
 function handleCompleteAnimation() {
   
   preloaderComplete = true;
@@ -74,6 +77,9 @@ function handleCompleteAnimation() {
   }, 2000);
 }
 
+document.addEventListener('load', handleCompleteAnimation);
+
+/*
 
 function cookieExists(name) {
   const cookies = document.cookie.split('; ');
@@ -97,6 +103,8 @@ if (cookieExists("lang-cookie")) {
   });
 
 }
+
+*/
 
 /* ad block checker */
 

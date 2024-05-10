@@ -7,6 +7,8 @@ var loadercont = document.getElementById("loader-cont");
 var slideup = document.getElementById("s-up");
 var slidedown = document.getElementById("s-down");
 
+/*
+
 function detectLanguageAndRedirect() {
   // Show the loader before making the AJAX request.
   $(loader).removeClass("complete-animation").removeClass("complete");
@@ -53,6 +55,8 @@ function detectLanguageAndRedirect() {
   });
 }
 
+*/
+
 function handleCompleteAnimation() {
   preloaderComplete = true;
 
@@ -79,6 +83,10 @@ function handleCompleteAnimation() {
   }, 2000);
 }
 
+document.addEventListener('load', handleCompleteAnimation);
+
+/*
+
 function cookieExists(name) {
   const cookies = document.cookie.split("; ");
   for (const cookie of cookies) {
@@ -97,6 +105,8 @@ if (cookieExists("lang-cookie")) {
     detectLanguageAndRedirect();
   });
 }
+
+*/
 
 /* ad block checker */
 
