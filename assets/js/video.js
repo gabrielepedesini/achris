@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     fullscreenButton.addEventListener("click", function(e) {
         e.preventDefault();
 
+        video.setAttribute('controls', 'controls');
+
         if (num === 0) {
             // Start video from the beginning
             video.currentTime = 0;
@@ -37,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Check if the document is currently in fullscreen mode
         if (!document.fullscreenElement) {
             video.muted = true; // Mute the video when exiting fullscreen
+            video.removeAttribute('controls');
             video.play();
-            
         }
     });
 });
