@@ -533,12 +533,15 @@ textarea {
   max-width: 80%;
 }
 
+.checkbox label {
+  cursor: none;
+}
+
 .checkbox a {
   color: var(--dark-gray);
   height: 18px;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   z-index: 50;
 }
 
@@ -1914,7 +1917,6 @@ textarea {
   font-weight: 300;
   line-height: 21.5px;
   color: var(--dark-gray);
-  cursor: pointer;
   transition: .3s;
 }
 
@@ -1995,7 +1997,6 @@ textarea {
   text-align: center;
   padding: 5px 16px;
   width: 100%;
-  cursor: pointer;
 
   color: var(--white);
   border: 2px solid var(--orange);
@@ -2012,8 +2013,6 @@ textarea {
   background-color: var(--dark-gray);
   border-radius: 5px;
   transition: .3s;
-
-  cursor: not-allowed;
 }
 
 .down-button.disabled:hover {
@@ -2039,6 +2038,10 @@ textarea {
   align-items: center;
   position: relative;
   max-width: 80%;
+}
+
+.flag-container label {
+  cursor: none;
 }
 
 .flag-desc {
@@ -2176,7 +2179,6 @@ input[type='checkbox'] + label > span {
   background: transparent;
   border: 2px solid #9E9E9E;
   border-radius: 2px;
-  cursor: pointer;
   transition: all 250ms cubic-bezier(.4, .0, .23, 1);
 }
 
@@ -2199,7 +2201,6 @@ input[type='checkbox']:checked + label > span {
 
 input[type='checkbox']:disabled + label > span:hover {
   border: 2px solid #9E9E9E;
-  cursor: not-allowed;
 }
 
 input[type='checkbox']:checked + label > span:before {
@@ -3688,7 +3689,6 @@ footer {
 
 .cookie-cancel {
   padding: 5px 14px;
-  cursor: pointer;
   position: relative;
 
   color: var(--white) !important;
@@ -3709,7 +3709,7 @@ footer {
 }
 
 .table-container {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 table {
