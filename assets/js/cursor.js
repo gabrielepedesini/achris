@@ -20,7 +20,7 @@ document.addEventListener('mousemove', (e) => {
   }, { duration: 300, fill: "forwards" });
 });
 
-document.querySelectorAll('a, button, .image-link').forEach((element) => {
+document.querySelectorAll('a, button, .image-link, .checkbox span, .flag-container span, .hamburger').forEach((element) => {
   element.addEventListener('mouseover', () => {
     cursorOutline.style.width = '60px';
     cursorOutline.style.height = '60px';
