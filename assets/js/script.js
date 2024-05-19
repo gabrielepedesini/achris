@@ -246,22 +246,29 @@ if (masterCheckbox) {
 
 /* skills */
 
-var offsetTop = $("#skill-alarm").offset().top;
-$(window).scroll(function () {
-  var height = $(window).height();
-  if ($(window).scrollTop() + height > offsetTop) {
-    jQuery(".skillbar").each(function () {
-      jQuery(this)
-        .find(".skillbar-bar")
-        .animate(
-          {
-            width: jQuery(this).attr("data-percent"),
-          },
-          1200
-        );
-    });
-  }
+const skillAlarm = document.querySelector("#skill-alarm");
+const skillBars = document.querySelectorAll(".skillbar");
+
+const animateSkillBars = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      skillBars.forEach(skillbar => {
+        const skillbarBar = skillbar.querySelector(".skillbar-bar");
+        const width = skillbar.getAttribute("data-percent");
+        skillbarBar.style.transition = 'width 1.2s ease-in-out';
+        skillbarBar.style.width = width;
+      });
+      observer.unobserve(skillAlarm);
+    }
+  });
+};
+
+const observerSkill = new IntersectionObserver(animateSkillBars, {
+  root: null,
+  threshold: 0.1
 });
+
+observerSkill.observe(skillAlarm);
 
 /* counters */
 
@@ -286,7 +293,6 @@ const observer = new IntersectionObserver(handleIntersection, options);
 observer.observe(targetElement);
 
 function counterUp() {
-  console.log("Element is visible!");
   const counterNumbers = document.querySelectorAll(".num");
 
   counterNumbers.forEach((num) => {
