@@ -36,8 +36,14 @@ document.querySelectorAll('a, button, .image-link, .checkbox span, .flag-contain
 document.addEventListener('fullscreenchange', () => {
     if (document.fullscreenElement) {
         document.body.style.cursor = 'default';
-        console.log('ciao')
     } else {
         document.body.style.cursor = 'none';
     }
 });
+
+// hide cursor on mobile
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  cursorDot.style.display = 'none';
+  cursorOutline.style.display = 'none';
+}
