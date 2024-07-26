@@ -61,6 +61,18 @@ if (acceptButton) {
     });
 }
 
+// Event listener for the "Decline" button
+const declineButton = document.getElementById("decline-cookie");
+if (declineButton) {
+    declineButton.addEventListener("click", function () {
+        setSessionCookie("cookie-decline", "true");
+        const cookieBanner = document.getElementById("cookie-banner");
+        if (cookieBanner) {
+            cookieBanner.style.display = "none";
+        }
+    });
+}
+
 // Event listener for the "Config" button
 const configButton = document.getElementById("config-cookie");
 if (configButton) {

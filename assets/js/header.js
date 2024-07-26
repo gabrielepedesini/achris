@@ -32,16 +32,16 @@ hamburger.addEventListener("click", function() {
 
 /* background color on scroll */
 
-const navbar = document.querySelector('.navbar');
+// const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', function() {
+// window.addEventListener('scroll', function() {
 
-  var scrollY = window.scrollY;
+//   var scrollY = window.scrollY;
 
-  if (scrollY >= 50) {
-    navbar.classList.add('navbar-background');
-} else {
-    navbar.classList.remove('navbar-background');
-}
+//   if (scrollY >= 50) {
+//     navbar.classList.add('navbar-background');
+// } else {
+//     navbar.classList.remove('navbar-background');
+// }
 
-});
+// });

@@ -436,6 +436,7 @@ textarea {
   border: 2px solid var(--light-gray);
   border-radius: 5px;
   transition: .3s;
+  padding: 5px;
 }
 
 .cookie-d:hover {
@@ -444,6 +445,23 @@ textarea {
   background-color: var(--light-gray);
   border-radius: 5px;
   transition: .3s;
+}
+
+.cookie-d.settings {
+  padding: 5px 7px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-d.settings:hover svg path {
+  fill: var(--light-black);
+  transition: .3s;
+}
+
+.cookie-d svg {
+  width: 20px;
+  height: 20px;
 }
 
 .cookie-a {
@@ -494,7 +512,7 @@ textarea {
   animation: slideInDown;
   animation-duration: 0.5s;
   z-index: 100000000;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .cookie-modal h3 {
@@ -639,6 +657,139 @@ textarea {
   .check-desc {
     font-size: 14px;
   }
+}
+
+
+
+body.botegashop .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #F2D900;
+  background-color: #F2D900;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.botegashop .cookie-a:hover {
+  color: #F2D900;
+  border: 2px solid #F2D900;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.botegashop input[type="checkbox"]:checked + label > span {
+  border: .5em solid #F2D900;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+body.cosplayer .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #8f65bf;
+  background-color: #8f65bf;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.cosplayer .cookie-a:hover {
+  color: #8f65bf;
+  border: 2px solid #8f65bf;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.cosplayer input[type="checkbox"]:checked + label > span {
+  border: .5em solid #8f65bf;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+body.ivanalbano .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #FF7504;
+  background-color: #FF7504;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.ivanalbano .cookie-a:hover {
+  color: #FF7504;
+  border: 2px solid #FF7504;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.ivanalbano input[type="checkbox"]:checked + label > span {
+  border: .5em solid #FF7504;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+body.lj .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #FF2805;
+  background-color: #FF2805;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.lj .cookie-a:hover {
+  color: #FF2805;
+  border: 2px solid #FF2805;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.lj input[type="checkbox"]:checked + label > span {
+  border: .5em solid #FF2805;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+body.scuolacasearia .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #0053a2;
+  background-color: #0053a2;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.scuolacasearia .cookie-a:hover {
+  color: #0053a2;
+  border: 2px solid #0053a2;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.scuolacasearia input[type="checkbox"]:checked + label > span {
+  border: .5em solid #0053a2;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+body.thatguy .cookie-a {
+  color: var(--light-black);
+  border: 2px solid #0092e3;
+  background-color: #0092e3;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.thatguy .cookie-a:hover {
+  color: #0092e3;
+  border: 2px solid #0092e3;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+body.thatguy input[type="checkbox"]:checked + label > span {
+  border: .5em solid #0092e3;
+  animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
 }
 
 /* --------------- MENU BTN ---------------- */
@@ -1316,7 +1467,7 @@ textarea {
 
 .carousel-title {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 48px;
   color: var(--white);
 
   text-shadow: 0px 0px 10px rgba(204, 204, 204, 0.15);
@@ -1334,7 +1485,7 @@ textarea {
 
 .underline--magical {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 48px;
   color: var(--white);
   overflow: hidden;
   background-image: linear-gradient(120deg, #ff911a 0%, #ffa546 100%);
@@ -1360,14 +1511,14 @@ textarea {
 
   .carousel-title {
     font-family: 'K2D', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     color: var(--white);
     letter-spacing: -1%;
   }
 
   .underline--magical {
     font-family: 'K2D', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     color: var(--white);
     letter-spacing: -1%;
   }
@@ -1380,14 +1531,14 @@ textarea {
 @media screen and (max-width: 800px) {
   .carousel-title {
     font-family: 'K2D', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 25px;
     text-align: center;
   }
 
   .underline--magical {
     font-family: 'K2D', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     color: var(--white);
   }
 
@@ -1672,17 +1823,26 @@ textarea {
 
 .portfolio-column h2 {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--white);
   letter-spacing: -1%;
   
   margin-bottom: 20px;
 }
 
+.portfolio-column h2 > span {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 800px) {
   .portfolio-column h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
+
+  .portfolio-column h2 > span {
+    font-size: 36px;
+  }
+  
 }
 
 @media screen and (max-height: 800px) {
@@ -1695,10 +1855,18 @@ textarea {
   .portfolio-column h2 {
     font-size: 36px;
   }
+
+  .portfolio-column h2 > span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-height: 520px) {
   .portfolio-column h2 {
+    font-size: 36px;
+  }
+
+  .portfolio-column h2 > span {
     font-size: 36px;
   }
 }
@@ -1734,7 +1902,7 @@ textarea {
   position: relative;
   display: inline-block;
   font-size: 32px;
-  line-height: 36px;
+  line-height: 40px;
   color: var(--light-gray);
   overflow: hidden;
   background: linear-gradient(to right, var(--orange), #ffa546  50%, var(--light-gray) 50%);
@@ -1763,7 +1931,7 @@ textarea {
 @media screen and (max-width: 800px) {
   .project-title {
     font-size: 24px;
-    line-height: 26px;
+    line-height: 30px;
   }
 
   .project-subtitle {
@@ -2253,7 +2421,7 @@ input[type='checkbox']:checked + label > span:before {
 
 .servizi {
   background-color: var(--light-black);
-  padding: 80px 0 60px 0;
+  padding: 80px 0;
 }
 
 .servizi-box {
@@ -2277,21 +2445,33 @@ input[type='checkbox']:checked + label > span:before {
 
 .servizi-box h2 {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--white);
   letter-spacing: -1%;
   
   margin-bottom: 80px;
 }
 
+.servizi-box h2 > span {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 800px) {
   .servizi-box h2 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .servizi-box h2 > span {
+    font-size: 36px;
   }
 }
 
 @media screen and (max-height: 800px) {
   .servizi-box h2 {
+    font-size: 40px;
+  }
+
+  .servizi-box h2 > span {
     font-size: 40px;
   }
 }
@@ -2302,6 +2482,10 @@ input[type='checkbox']:checked + label > span:before {
     font-size: 36px;
     margin-bottom: 40px;
   }
+
+  .servizi-box h2 > span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-height: 520px) {
@@ -2309,23 +2493,22 @@ input[type='checkbox']:checked + label > span:before {
     font-size: 36px;
     margin-bottom: 40px;
   }
+
+  .servizi-box h2 > span {
+    font-size: 36px;
+  }
 }
 
-.servizi-box > div {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.servizi-desc {
-  height: 250px;
-  width: 50%;
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 60px;
 }
 
 @media screen and (max-width: 768px) {
   .servizi-desc {
     width: 100%;
     height: fit-content;
-    margin-bottom: 50px;
   }
 }
 
@@ -2376,10 +2559,15 @@ input[type='checkbox']:checked + label > span:before {
     margin-bottom: 20px;
   }
 
+  .servizi-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 60px;
+  }
+
   .servizi-desc {
     width: 100%;
     height: fit-content;
-    margin-bottom: 50px;
   }
 }
 
@@ -2413,7 +2601,7 @@ input[type='checkbox']:checked + label > span:before {
 
 .skills h2 {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--white);
   letter-spacing: -1%;
   
@@ -2421,14 +2609,26 @@ input[type='checkbox']:checked + label > span:before {
   margin-bottom: 80px;
 }
 
+.skills h2 > span {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 800px) {
   .skills h2 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .skills h2 > span {
+    font-size: 36px;
   }
 }
 
 @media screen and (max-height: 800px) {
   .skills h2 {
+    font-size: 40px;
+  }
+
+  .skills h2 > span {
     font-size: 40px;
   }
 }
@@ -2438,12 +2638,20 @@ input[type='checkbox']:checked + label > span:before {
     font-size: 36px;
     margin-bottom: 40px;
   }
+
+  .skills h2 > span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-height: 520px) {
   .skills h2 {
     font-size: 36px;
     margin-bottom: 40px;
+  }
+
+  .skills h2 > span {
+    font-size: 36px;
   }
 }
 
@@ -2795,7 +3003,7 @@ input[type='checkbox']:checked + label > span:before {
 
 .contatti-desc h2 {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--white);
   letter-spacing: -1%;
   width: 95%;
@@ -2803,14 +3011,26 @@ input[type='checkbox']:checked + label > span:before {
   margin-bottom: 80px;
 }
 
+.contatti-desc h2 > span {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 800px) {
   .contatti-desc h2 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .contatti-desc h2 > span {
+    font-size: 36px;
   }
 }
 
 @media screen and (max-height: 800px) {
   .contatti-desc h2 {
+    font-size: 40px;
+  }
+
+  .contatti-desc h2 > span {
     font-size: 40px;
   }
 }
@@ -2820,12 +3040,20 @@ input[type='checkbox']:checked + label > span:before {
     font-size: 36px;
     margin-bottom: 40px;
   }
+
+  .contatti-desc h2 > span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-height: 520px) {
   .contatti-desc h2 {
     font-size: 36px;
     margin-bottom: 40px;
+  }
+
+  .contatti-desc h2 > span {
+    font-size: 36px;
   }
 }
 
@@ -3033,7 +3261,7 @@ form {
 
 .container-social h2 {
   font-family: 'K2D', sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--light-gray);
   letter-spacing: -1%;
   text-align: center;
@@ -3041,18 +3269,30 @@ form {
   margin-bottom: 50px;
 }
 
+.container-social h2 > span {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 800px) {
   .container-social h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .container-social {
     height: 400px;
   }
+
+  .container-social h2 > span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-height: 800px) {
   .container-social h2 {
+    font-size: 40px;
+  }
+
+  .container-social h2 > span {
     font-size: 40px;
   }
 
@@ -3068,12 +3308,21 @@ form {
     margin-bottom: 40px;
   }
 
+  .container-social h2 > span {
+    font-size: 28px;
+  }
+
   .container-social {
     height: 350px;
   }
 }
 
 @media screen and (max-height: 520px) {
+  .container-social h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
   .container-social h2 {
     font-size: 28px;
     margin-bottom: 40px;
@@ -3208,10 +3457,43 @@ footer {
   height: 200px;
 }
 
-.footer-text {
+.copyright {
+  font-size: 18px;
+  color: var(--light-gray);
+  margin-bottom: 15px;
+}
+
+.copyright .anno {
   font-size: 18px;
   color: var(--dark-gray);
-  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+footer .line {
+  width: 100%;
+  height: 1px;
+  background-color: #242424;
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+
+footer .policies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 5px;
+  height: fit-content;
+  font-size: 14px;
+}
+
+footer .policies a {
+  color: var(--dark-gray);
+  font-size: 14px;
+  text-decoration: underline;
+  white-space: nowrap;
+  transition: .3s;
 }
 
 .marchetta {
@@ -3228,9 +3510,17 @@ footer {
 }
 
 @media screen and (max-width: 520px) {
-  .footer-text {
+  .copyright {
     font-size: 16px;
-    margin-bottom: 8px;
+  }
+
+  .copyright .anno {
+    font-size: 16px;
+    color: var(--dark-gray);
+  }
+
+  footer .policies {
+    flex-direction: column;
   }
 
   .marchetta {
@@ -3243,9 +3533,17 @@ footer {
 }
 
 @media screen and (max-height: 520px) {
-  .footer-text {
+  .copyright {
     font-size: 16px;
-    margin-bottom: 8px;
+  }
+
+  .copyright .anno {
+    font-size: 16px;
+    color: var(--dark-gray);
+  }
+
+  footer .policies {
+    flex-direction: column;
   }
 
   .marchetta {
