@@ -143,25 +143,25 @@ setTimeout(adBlockCheck, 1000);
 
 /* download */
 
-var downOpen = document.getElementById("download-open");
-var downClose = document.getElementById("download-close");
-var modal = document.getElementById("modal");
+// var downOpen = document.getElementById("download-open");
+// var downClose = document.getElementById("download-close");
+// var modal = document.getElementById("modal");
 
-function openModal() {
-  modal.style.display = "flex";
-}
+// function openModal() {
+//   modal.style.display = "flex";
+// }
 
-function closeModal() {
-  modal.style.display = "none";
-}
+// function closeModal() {
+//   modal.style.display = "none";
+// }
 
-downOpen.addEventListener("click", openModal);
-downClose.addEventListener("click", closeModal);
-modal.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    closeModal();
-  }
-});
+// downOpen.addEventListener("click", openModal);
+// downClose.addEventListener("click", closeModal);
+// modal.addEventListener("click", (event) => {
+//   if (event.target === modal) {
+//     closeModal();
+//   }
+// });
 
 /* checkbox */
 

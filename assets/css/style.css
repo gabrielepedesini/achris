@@ -1552,7 +1552,6 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 
   .scroll-button {
     position: relative;
-    cursor: pointer;
     width: 30px;
     height: 50px;
   }
@@ -1797,7 +1796,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1827,7 +1826,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
   color: var(--white);
   letter-spacing: -1%;
   
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .portfolio-column h2 > span {
@@ -1837,6 +1836,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 @media screen and (max-width: 800px) {
   .portfolio-column h2 {
     font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .portfolio-column h2 > span {
@@ -1848,12 +1848,14 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 @media screen and (max-height: 800px) {
   .portfolio-column h2 {
     font-size: 40px;
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (max-width: 520px) {
   .portfolio-column h2 {
     font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .portfolio-column h2 > span {
@@ -1864,6 +1866,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 @media screen and (max-height: 520px) {
   .portfolio-column h2 {
     font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .portfolio-column h2 > span {
@@ -1880,20 +1883,49 @@ body.thatguy input[type="checkbox"]:checked + label > span {
   overflow-y: clip;
   border-radius: 5px;
   aspect-ratio: 1 / 1;
-
+  position: relative;
   margin-bottom: 25px;
 }
 
 .project-img img {
   width: 100%;
   border-radius: 5px;
-  transition: 1s;
+  transition: 0.8s;
+  position: relative;
 }
 
-.project-img img:hover {
+.project-img:hover img {
   transform: scale(1.2); 
   border-radius: 5px;
-  transition: 1s;
+  transition: 0.8s;
+}
+
+/* .project-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #1818188a;
+  position: absolute;
+  opacity: 1;
+  transition: .5s;
+  border: 2px solid #ff901a75;
+}
+
+.project-img:hover::before {
+  opacity: 0;
+  transition: .5s;
+} */
+
+@media (hover: none) {
+
+  /* .project-img::before {
+    opacity: 0;
+  } */
+  
 }
 
 .project-title {
@@ -1929,6 +1961,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 }
 
 @media screen and (max-width: 800px) {
+  
   .project-title {
     font-size: 24px;
     line-height: 30px;
@@ -1952,11 +1985,62 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 
 /* -----------------  DESC ------------------ */
 
+.desc-box h2 {
+  font-family: 'K2D', sans-serif;
+  font-size: 40px;
+  color: var(--white);
+  letter-spacing: -1%;
+  
+  margin-bottom: 15px;
+}
+
+.desc-box h2 > span {
+  font-size: 40px;
+  color: var(--white);
+}
+
+@media screen and (max-width: 800px) {
+  .desc-box h2 {
+    font-size: 36px;
+  }
+
+  .desc-box h2 > span {
+    font-size: 36px;
+  }
+  
+}
+
+@media screen and (max-height: 800px) {
+  .desc-box h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .desc-box h2 {
+    font-size: 36px;
+  }
+
+  .desc-box h2 > span {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-height: 520px) {
+  .desc-box h2 {
+    font-size: 36px;
+  }
+
+  .desc-box h2 > span {
+    font-size: 36px;
+  }
+}
+
 .desc-box {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .desc-box p {
@@ -1975,17 +2059,17 @@ body.thatguy input[type="checkbox"]:checked + label > span {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .desc-btn {
-  padding: 12px 32px;
+  padding: 10px 16px;
   cursor: pointer;
   position: relative;
 }
 
 .b1 {
-  color: var(--orange);
+  color: var(--white);
   border: 2px solid var(--orange);
   border-radius: 5px;
   transition: .5s;
@@ -2000,7 +2084,7 @@ body.thatguy input[type="checkbox"]:checked + label > span {
 }
 
 .b2 {
-  color: var(--light-gray);
+  color: var(--white);
   border: 2px solid var(--light-gray);
   border-radius: 5px;
   transition: .5s;
@@ -2533,8 +2617,6 @@ input[type='checkbox']:checked + label > span:before {
   font-weight: 400;
   line-height: 18px;
   color: var(--dark-gray);
-
-  cursor: default;
 }
 
 .vert {
