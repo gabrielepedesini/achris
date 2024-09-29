@@ -1,0 +1,6 @@
+<svg id="quadrato-griglia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+	<g id="quadrato">
+	<rect id="interno-quadrato" x="2.5" y="2.5" width="70" height="70" style="fill:#fff"/>
+	<path id="contorno-quadrato" d="M70,5V70H5V5H70m5-5H0V75H75V0Z" transform="translate(0 0)" style="fill:#4a84ff"/>
+	</g>
+</svg>
