@@ -201,7 +201,7 @@ saveButton.addEventListener("click", function() {
         }
         cookieModal.style.display = "none";
 
-    } else if (!isChecked1 && !isChecked2) {
+    } else if (!isChecked1 /* && !isChecked2 */) {
         setSessionCookie("cookie-decline", "true");
         const cookieBanner = document.getElementById("cookie-banner");
         if (cookieBanner) {
