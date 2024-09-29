@@ -53,7 +53,7 @@ if (acceptButton) {
     acceptButton.addEventListener("click", function () {
         // Set a cookie to remember user's choice for 90 days
         setCookie("cookie-consent", "true", 90);
-        setCookie("analytics-consent", "true", 90);
+        // setCookie("analytics-consent", "true", 90);
         const cookieBanner = document.getElementById("cookie-banner");
         if (cookieBanner) {
             cookieBanner.style.display = "none";
@@ -121,7 +121,7 @@ cookieModal.addEventListener('click', function (event) {
 });
 
 const checkbox1 = document.querySelector(".checkbox1");
-const checkbox2 = document.querySelector(".checkbox2");
+// const checkbox2 = document.querySelector(".checkbox2");
 
 // Disable checkbox2 if checkbox1 is unchecked
 checkbox1.addEventListener("change", function () {
@@ -134,13 +134,13 @@ checkbox1.addEventListener("change", function () {
 
 
 const showDesc1 = document.getElementById("show-desc-1");
-const showDesc2 = document.getElementById("show-desc-2");
+// const showDesc2 = document.getElementById("show-desc-2");
 
 const desc1 = document.getElementById("desc-1");
-const desc2 = document.getElementById("desc-2");
+// const desc2 = document.getElementById("desc-2");
 
 const arrow1 = document.getElementById("arrow-1");
-const arrow2 = document.getElementById("arrow-2");
+// const arrow2 = document.getElementById("arrow-2");
 
 let isOpen1 = false;
 let isOpen2 = false;
@@ -160,20 +160,20 @@ showDesc1.addEventListener("click", function() {
   isOpen1 = !isOpen1;
 });
 
-showDesc2.addEventListener("click", function() {
-  if (isOpen2) {
-    // Close the description
-    desc2.classList.remove("height");
-    arrow2.classList.remove("rotate");
-  } else {
-    // Open the description with a 0.3s transition
-    desc2.classList.add("height");
-    arrow2.classList.add("rotate");
-  }
+// showDesc2.addEventListener("click", function() {
+//   if (isOpen2) {
+//     // Close the description
+//     desc2.classList.remove("height");
+//     arrow2.classList.remove("rotate");
+//   } else {
+//     // Open the description with a 0.3s transition
+//     desc2.classList.add("height");
+//     arrow2.classList.add("rotate");
+//   }
   
-  // Toggle the state
-  isOpen2 = !isOpen2;
-});
+//   // Toggle the state
+//   isOpen2 = !isOpen2;
+// });
 
 
 // Event listener for the "Save" button
@@ -181,7 +181,8 @@ const saveButton = document.getElementById("save-cookie");
 
 saveButton.addEventListener("click", function() {
     const isChecked1 = checkbox1.checked;
-    const isChecked2 = checkbox2.checked;
+    // const isChecked2 = checkbox2.checked;
+    const isChecked2 = true;
 
     if (isChecked1 && !isChecked2) {
         setCookie("cookie-consent", "true", 90);
@@ -193,7 +194,7 @@ saveButton.addEventListener("click", function() {
 
     } else if (isChecked1 && isChecked2) {
         setCookie("cookie-consent", "true", 90);
-        setCookie("analytics-consent", "true", 90);
+        // setCookie("analytics-consent", "true", 90);
         const cookieBanner = document.getElementById("cookie-banner");
         if (cookieBanner) {
             cookieBanner.style.display = "none";
